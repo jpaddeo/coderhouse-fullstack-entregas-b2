@@ -13,13 +13,13 @@ Acorde a la consigna se implementó Passport.js con las siguientes estrategias:
 
 #### 1. **Local Strategy (Login)**
 
-- **Endpoint**: `POST /api/sessions/login`
+- **Endpoint**: `POST /api/auth/login`
 - **Campos**: `email`, `password`
 - **Respuesta**: Token JWT + datos del usuario
 
 #### 2. **Local Strategy (Registro)**
 
-- **Endpoint**: `POST /api/sessions/register`
+- **Endpoint**: `POST /api/auth/register`
 - **Campos**: `first_name`, `last_name`, `email`, `age`, `password`, `role` (opcional)
 - **Respuesta**: Token JWT + datos del usuario
 

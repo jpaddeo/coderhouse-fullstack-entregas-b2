@@ -7,15 +7,33 @@ const ticketSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
-  cart: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'carts',
-    required: true,
-  },
   purchaser: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'users',
     required: true,
+  },
+  address: {
+    type: String,
+    required: true,
+  },
+  items: {
+    type: [
+      {
+        product: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: 'products',
+        },
+        quantity: {
+          type: Number,
+          default: 1,
+        },
+        price: {
+          type: Number,
+          required: true,
+        },
+      },
+    ],
+    default: [],
   },
 });
 
